@@ -1,0 +1,78 @@
+{
+  "name": "proxy-keyhide",
+  "version": "1.0.0",
+  "description": "AI中转服务 - 本地API密钥保护与多平台聚合代理",
+  "main": "./out/main/index.js",
+  "author": "keyhide",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "start": "electron-vite preview",
+    "build:win": "electron-vite build && electron-builder --win",
+    "build:mac": "electron-vite build && electron-builder --mac",
+    "build:linux": "electron-vite build && electron-builder --linux"
+  },
+  "dependencies": {
+    "fastify": "^4.27.0",
+    "@fastify/cors": "^9.0.1",
+    "zustand": "^4.5.4",
+    "react-router-dom": "^6.26.0",
+    "lucide-react": "^0.427.0",
+    "clsx": "^2.1.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "electron": "^31.3.0",
+    "electron-vite": "^2.3.0",
+    "electron-builder": "^24.13.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/node": "^20.14.14",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5",
+    "tailwindcss": "^3.4.7",
+    "postcss": "^8.4.40",
+    "autoprefixer": "^10.4.19",
+    "@vitejs/plugin-react": "^4.3.1"
+  },
+  "build": {
+    "appId": "com.keyhide.app",
+    "productName": "Keyhide",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**/*",
+      "resources/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "resources/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Keyhide"
+    },
+    "portable": {
+      "artifactName": "Keyhide-Portable-${version}.exe"
+    },
+    "mac": {
+      "target": ["dmg"],
+      "icon": "resources/icon.png"
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "icon": "resources/icon.png"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+out/
+release/
+release_v1/
+dist/
+.electron-cache/
+
+# Runtime data
+.data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Encrypted data files (contains API keys - NEVER upload)
+*.enc
+*.salt
+aihide-data.json
