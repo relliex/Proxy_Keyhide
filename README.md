@@ -2,7 +2,7 @@
 
 <img src="image/README/1782339203856.png" alt="Keyhide"/>
 
-<h1>🔑 Keyhide</h1>
+<h1>Keyhide</h1>
 
 <h3>Local AI Relay & API Key Protection Service</h3>
 
